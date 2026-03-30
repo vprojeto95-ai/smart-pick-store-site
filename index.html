@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Smart Pick Store | Kitchen Organization Ideas</title>
   <meta name="description" content="Smart kitchen organization ideas with practical product picks for sink area, drawers, pantry, cabinets, and small spaces." />
+  <meta name="theme-color" content="#f6f2ec" />
+  <meta property="og:title" content="Smart Pick Store | Kitchen Organization Ideas" />
+  <meta property="og:description" content="Curated kitchen organization ideas with practical picks for sink area, drawers, pantry, cabinets, and small spaces." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Imagens/pinterest-pin-01-pia-bancada.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <style>
     :root {
       --bg: #f6f2ec;
@@ -47,9 +54,19 @@
     }
 
     .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       font-weight: 700;
       letter-spacing: 0.2px;
       color: var(--text);
+    }
+
+    .brand-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      flex: 0 0 auto;
     }
 
     .pill-row {
@@ -360,6 +377,25 @@
       color: #55504b;
     }
 
+    .faq {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fffdf9;
+      padding: 18px;
+    }
+
+    .faq-item + .faq-item {
+      border-top: 1px solid var(--line);
+      margin-top: 14px;
+      padding-top: 14px;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
     .footer {
       text-align: center;
       font-size: 14px;
@@ -383,7 +419,7 @@
 <body>
   <div class="wrap">
     <div class="topbar">
-      <div class="brand">Smart Pick Store</div>
+      <div class="brand"><img class="brand-mark" src="Imagens/smart-pick-store-mark.svg" alt="Smart Pick Store" /> <span>Smart Pick Store</span></div>
       <div>Kitchen organization picks for real daily use</div>
     </div>
 
@@ -540,10 +576,25 @@
           <li>Product placeholders positioned for final affiliate link insertion</li>
         </ul>
       </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <strong>Who is this page for?</strong>
+          <div class="micro">People who want a kitchen that feels calmer, cleaner, and easier to use without overcomplicating the setup.</div>
+        </div>
+        <div class="faq-item">
+          <strong>How should you use this page?</strong>
+          <div class="micro">Start with the section that solves your biggest daily annoyance first, then improve the rest step by step.</div>
+        </div>
+        <div class="faq-item">
+          <strong>Are the product links active yet?</strong>
+          <div class="micro">Not yet. The page structure and visuals are ready, and the product links will be inserted last.</div>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
-      Smart Pick Store — draft page prepared for the project's first monetized destination.
+      Smart Pick Store — curated kitchen organization picks for a cleaner, calmer daily routine.
     </div>
   </div>
 </body>

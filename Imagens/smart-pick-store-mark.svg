@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Smart Pick Store mark">
+  <rect width="128" height="128" rx="28" fill="#f6f2ec"/>
+  <rect x="18" y="18" width="92" height="92" rx="22" fill="#ffffff" stroke="#e9e2d8" stroke-width="4"/>
+  <path d="M39 43h50" stroke="#b6412e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M39 64h32" stroke="#b6412e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M39 85h26" stroke="#b6412e" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="84" cy="79" r="15" fill="#b6412e"/>
+  <path d="M78 79l4 4 9-10" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
