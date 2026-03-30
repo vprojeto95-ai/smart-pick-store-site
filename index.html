@@ -3,82 +3,459 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kitchen Organization Ideas</title>
-  <meta name="description" content="Practical kitchen organization ideas with useful product picks for sink area, drawers, pantry, cabinets, and small spaces." />
+  <title>Smart Pick Store | Kitchen Organization Ideas</title>
+  <meta name="description" content="Smart kitchen organization ideas with practical product picks for sink area, drawers, pantry, cabinets, and small spaces." />
   <style>
     :root {
-      --bg: #f7f5f1;
+      --bg: #f6f2ec;
       --card: #ffffff;
-      --text: #222222;
-      --muted: #5f5f5f;
-      --accent: #c0392b;
-      --accent-dark: #9d2f24;
-      --line: #ece7df;
-      --note-bg: #fff8e6;
-      --note-line: #e6b800;
+      --soft: #fbf8f4;
+      --text: #1f1f1f;
+      --muted: #66625d;
+      --accent: #b6412e;
+      --accent-dark: #903225;
+      --accent-soft: #f7e6df;
+      --line: #e9e2d8;
+      --good: #2f6b4f;
+      --shadow: 0 10px 30px rgba(52, 40, 27, 0.08);
     }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: var(--bg);
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f5efe7 0%, #f8f5f0 100%);
       color: var(--text);
       line-height: 1.55;
     }
+
     .wrap {
-      max-width: 860px;
+      max-width: 1040px;
       margin: 0 auto;
-      padding: 32px 20px 60px;
+      padding: 24px 18px 60px;
     }
-    h1, h2, h3 { line-height: 1.2; margin-top: 0; }
-    h1 { font-size: 34px; margin-bottom: 12px; }
-    h2 { font-size: 24px; margin-bottom: 16px; }
-    h3 { font-size: 18px; margin-bottom: 8px; }
-    .sub { font-size: 18px; color: var(--muted); margin-bottom: 28px; }
-    .hero, .section, .disclosure {
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--text);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.7);
+      color: #544d46;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
       background: var(--card);
-      border-radius: 18px;
-      padding: 24px 28px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .hero-copy {
+      padding: 34px 30px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3 { margin-top: 0; line-height: 1.15; }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .sub {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 58ch;
+    }
+
+    .hero-note {
+      color: #4d473f;
+      max-width: 58ch;
+    }
+
+    .hero-visual {
+      min-height: 100%;
+      padding: 24px;
+      background:
+        linear-gradient(145deg, rgba(247,230,223,0.95), rgba(250,245,240,0.95)),
+        linear-gradient(180deg, #ddd0c3 0%, #f8f5f0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mock-kitchen {
+      width: 100%;
+      max-width: 360px;
+      background: #fffdf9;
+      border: 1px solid #eee3d8;
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: 0 18px 40px rgba(87, 59, 36, 0.12);
+    }
+
+    .mock-top {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .block, .mini, .line, .product-thumb {
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff 0%, #f4ede6 100%);
+      border: 1px solid #eee3d8;
+    }
+
+    .block {
+      min-height: 140px;
+      padding: 14px;
+      display: flex;
+      align-items: flex-end;
+      color: #6c5d4d;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .mini-col { display: grid; gap: 12px; }
+    .mini { min-height: 64px; }
+    .line { min-height: 18px; }
+
+    .mock-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .product-thumb {
+      min-height: 84px;
+      padding: 10px;
+      display: flex;
+      align-items: end;
+      font-size: 12px;
+      color: #6d6257;
+      font-weight: 700;
+    }
+
+    .section,
+    .disclosure,
+    .trust {
+      background: var(--card);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 26px;
       margin-bottom: 20px;
     }
-    .item { border-top: 1px solid var(--line); padding: 16px 0; }
-    .item:first-of-type { border-top: 0; padding-top: 0; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      font-size: 13px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 58ch;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .category-card {
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--soft);
+    }
+
+    .visual {
+      min-height: 220px;
+      padding: 18px;
+      background: linear-gradient(160deg, #f6e9dd 0%, #fffaf5 100%);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 8px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(20, 20, 20, 0.06) 0%, rgba(20, 20, 20, 0.42) 100%);
+      z-index: -1;
+    }
+
+    .visual-sink {
+      background-image: url('Imagens/pinterest-pin-01-pia-bancada.png');
+    }
+
+    .visual-drawers {
+      background-image: url('Imagens/site-curadoria-gavetas-utensilios.png');
+    }
+
+    .visual-pantry {
+      background-image: url('Imagens/site-curadoria-armario-despensa.png');
+    }
+
+    .visual-lids {
+      background-image: url('Imagens/site-curadoria-tampas-itens-dificeis.png');
+    }
+
+    .visual .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(255,255,255,0.85);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #5d554d;
+      width: fit-content;
+    }
+
+    .visual-title {
+      font-size: 24px;
+      font-weight: 700;
+      max-width: 10ch;
+      color: #ffffff;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+    }
+
+    .category-content {
+      padding: 18px;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .item {
+      border-top: 1px solid var(--line);
+      padding: 14px 0;
+    }
+
+    .item:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .item p {
+      margin: 0 0 8px;
+      color: #55504b;
+    }
+
     .btn {
       display: inline-block;
       background: var(--accent);
       color: white;
       text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 10px;
-      margin-top: 8px;
-      font-weight: bold;
+      padding: 11px 16px;
+      border-radius: 12px;
+      margin-top: 6px;
+      font-weight: 700;
+      font-size: 14px;
     }
+
     .btn:hover { background: var(--accent-dark); }
+
     .btn.disabled {
-      background: #999;
+      background: #9a968f;
       pointer-events: none;
       cursor: default;
     }
-    .micro { font-size: 13px; color: var(--muted); }
-    .note {
-      background: var(--note-bg);
-      border-left: 4px solid var(--note-line);
-      padding: 14px 16px;
-      border-radius: 8px;
-      margin-top: 26px;
-      color: #5c4a00;
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid #e2c8be;
     }
-    .footer { font-size: 14px; color: #666; margin-top: 30px; }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .trust-box {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      background: var(--soft);
+    }
+
+    .trust-box strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .micro {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .note {
+      margin-top: 18px;
+      background: #fff8e8;
+      border-left: 4px solid #dfb04f;
+      padding: 14px 16px;
+      border-radius: 10px;
+      color: #634f1f;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 28px;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .category-grid,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 { font-size: 34px; }
+      .hero-copy, .hero-visual, .section, .disclosure, .trust { padding: 22px; }
+      .section-head { display: block; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+    <div class="topbar">
+      <div class="brand">Smart Pick Store</div>
+      <div>Kitchen organization picks for real daily use</div>
+    </div>
+
     <div class="hero">
-      <h1>Kitchen organization ideas that actually make daily life easier</h1>
-      <p class="sub">A practical selection of useful products for sink area, drawers, pantry, cabinets, and small kitchen spaces.</p>
-      <p>Start with the simplest product for your biggest problem, then improve your kitchen one area at a time.</p>
+      <div class="hero-copy">
+        <span class="eyebrow">Curated for practical kitchens</span>
+        <h1>Kitchen organization ideas that look better, feel easier, and actually help every day</h1>
+        <p class="sub">A cleaner, calmer kitchen usually starts with a few smart upgrades — not a remodel. These picks focus on everyday use, small spaces, and simple organization wins.</p>
+        <p class="hero-note">This page was built as a practical curation, not a random product dump. Start with the section that matches your biggest frustration right now: sink clutter, messy drawers, crowded cabinets, or hard-to-store lids.</p>
+        <div class="pill-row">
+          <span class="pill">✓ Small-space friendly</span>
+          <span class="pill">✓ Practical picks</span>
+          <span class="pill">✓ Simple to understand</span>
+          <span class="pill">✓ Easy visual upgrades</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="mock-kitchen">
+          <div class="mock-top">
+            <div class="block">Organized sink zone</div>
+            <div class="mini-col">
+              <div class="mini"></div>
+              <div class="mini"></div>
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="line" style="margin-top:10px; width:78%;"></div>
+          <div class="mock-bottom">
+            <div class="product-thumb">Drawer order</div>
+            <div class="product-thumb">Cabinet space</div>
+            <div class="product-thumb">Pantry clarity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust">
+      <div class="section-kicker">Why this page feels different</div>
+      <h2>Organized by problem, not by clutter</h2>
+      <p class="section-sub">Instead of sending you through endless search pages, this curation is grouped by what people actually want to solve in the kitchen: a messy sink, chaotic drawers, cabinets with wasted space, and hard-to-store items.</p>
+      <div class="trust-grid">
+        <div class="trust-box">
+          <strong>Useful first</strong>
+          <div class="micro">Products were grouped by daily friction points, not by random category stuffing.</div>
+        </div>
+        <div class="trust-box">
+          <strong>Easy to scan</strong>
+          <div class="micro">Short sections, clean structure, and direct product intent so you can decide faster.</div>
+        </div>
+        <div class="trust-box">
+          <strong>Built for confidence</strong>
+          <div class="micro">Simple design, clear wording, and a calmer browsing path for cold visitors coming from Pinterest.</div>
+        </div>
+      </div>
     </div>
 
     <div class="disclosure">
@@ -87,76 +464,106 @@
     </div>
 
     <div class="section">
-      <h2>Sink and counter</h2>
-      <div class="item">
-        <h3>Sponge and soap holder</h3>
-        <p>A small upgrade that helps keep the sink area cleaner, simpler, and easier to maintain.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Curated sections</div>
+          <h2>Start with the kitchen area that bothers you most</h2>
+        </div>
+        <div class="section-sub">Each section below uses a stronger title, a short subtitle, and direct product logic to make the path to clicking feel more natural.</div>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>Drawers and utensils</h2>
-      <div class="item">
-        <h3>Adjustable drawer organizer</h3>
-        <p>A practical way to separate utensils and reduce drawer clutter fast.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-      <div class="item">
-        <h3>Modular utensil tray</h3>
-        <p>Useful for keeping smaller kitchen items easier to find and use.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-    </div>
+      <div class="category-grid">
+        <div class="category-card">
+          <div class="visual visual-sink">
+            <span class="tag">Quick win</span>
+            <div class="visual-title">Cleaner sink, calmer counter</div>
+          </div>
+          <div class="category-content">
+            <p class="lead">One small product can make the sink area look cleaner and feel easier to maintain every day.</p>
+            <div class="item">
+              <h3>Sponge and soap holder</h3>
+              <p>Good for reducing wet clutter around the sink and making the counter feel more organized fast.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+          </div>
+        </div>
 
-    <div class="section">
-      <h2>Cabinet and pantry</h2>
-      <div class="item">
-        <h3>Pantry basket organizer</h3>
-        <p>Helps group kitchen items and improve pantry visibility.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-      <div class="item">
-        <h3>Extra cabinet shelf</h3>
-        <p>A simple way to create more usable storage space inside cabinets.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-      <div class="item">
-        <h3>Stackable pantry organizer</h3>
-        <p>Useful for vertical storage in smaller kitchens.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-      <div class="item">
-        <h3>Clear pantry container set</h3>
-        <p>Great for visual organization and a cleaner pantry setup.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-    </div>
+        <div class="category-card">
+          <div class="visual visual-drawers">
+            <span class="tag">Everyday utility</span>
+            <div class="visual-title">Drawers that make sense again</div>
+          </div>
+          <div class="category-content">
+            <p class="lead">If utensils are always mixed together, this is often one of the fastest and most satisfying upgrades.</p>
+            <div class="item">
+              <h3>Adjustable drawer organizer</h3>
+              <p>Helps separate utensils clearly and reduce the constant friction of messy kitchen drawers.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+            <div class="item">
+              <h3>Modular utensil tray</h3>
+              <p>Useful when you want a little more flexibility for smaller tools, gadgets, and cooking accessories.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+          </div>
+        </div>
 
-    <div class="section">
-      <h2>Lids and hard-to-store items</h2>
-      <div class="item">
-        <h3>Vertical lid organizer</h3>
-        <p>A simple solution for keeping lids and boards separated and easy to grab.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
-      </div>
-    </div>
+        <div class="category-card">
+          <div class="visual visual-pantry">
+            <span class="tag">Space saving</span>
+            <div class="visual-title">Cabinets and pantry with more breathing room</div>
+          </div>
+          <div class="category-content">
+            <p class="lead">These picks focus on creating clearer zones and using vertical space better, especially in smaller kitchens.</p>
+            <div class="item">
+              <h3>Pantry basket organizer</h3>
+              <p>Useful for grouping related items so the pantry looks cleaner and is easier to navigate.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+            <div class="item">
+              <h3>Extra cabinet shelf</h3>
+              <p>A simple way to create usable space inside cabinets without changing the whole setup.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+            <div class="item">
+              <h3>Stackable pantry organizer</h3>
+              <p>Good for getting more value from vertical storage when shelf space is limited.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+            <div class="item">
+              <h3>Clear pantry container set</h3>
+              <p>Strong visual payoff and a cleaner overall look for people who like visible order.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+          </div>
+        </div>
 
-    <div class="section">
-      <h2>Higher-value option</h2>
-      <div class="item">
-        <h3>Premium kitchen organization kit</h3>
-        <p>A more complete setup for people who want a bigger visual and practical transformation.</p>
-        <a class="btn disabled" href="#">Affiliate link placeholder</a>
+        <div class="category-card">
+          <div class="visual visual-lids">
+            <span class="tag">Specific problem</span>
+            <div class="visual-title">Lids, boards, and awkward items under control</div>
+          </div>
+          <div class="category-content">
+            <p class="lead">This section is for the items that usually end up leaning, falling, sliding, or taking too much room.</p>
+            <div class="item">
+              <h3>Vertical lid organizer</h3>
+              <p>Helps keep lids and similar items upright, separated, and much easier to grab.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+            <div class="item">
+              <h3>Premium kitchen organization kit</h3>
+              <p>For people who want a more complete setup with stronger visual transformation from the start.</p>
+              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="note">
-      Replace each placeholder with the real affiliate link as soon as the affiliate account and first product links are ready.
+      <div class="note">Visual upgrade applied with the project's selected images. Next step: update the published page and replace link placeholders with real affiliate links.</div>
     </div>
 
     <div class="footer">
-      Deploy-ready draft for the project\'s first monetized destination.
+      Smart Pick Store — draft page prepared for the project's first monetized destination.
     </div>
   </div>
 </body>
