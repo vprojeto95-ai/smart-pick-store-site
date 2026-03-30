@@ -128,65 +128,33 @@
       min-height: 100%;
       padding: 24px;
       background:
-        linear-gradient(145deg, rgba(247,230,223,0.95), rgba(250,245,240,0.95)),
-        linear-gradient(180deg, #ddd0c3 0%, #f8f5f0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .mock-kitchen {
-      width: 100%;
-      max-width: 360px;
-      background: #fffdf9;
-      border: 1px solid #eee3d8;
-      border-radius: 24px;
-      padding: 18px;
-      box-shadow: 0 18px 40px rgba(87, 59, 36, 0.12);
-    }
-
-    .mock-top {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .block, .mini, .line, .product-thumb {
-      border-radius: 16px;
-      background: linear-gradient(180deg, #fff 0%, #f4ede6 100%);
-      border: 1px solid #eee3d8;
-    }
-
-    .block {
-      min-height: 140px;
-      padding: 14px;
-      display: flex;
-      align-items: flex-end;
-      color: #6c5d4d;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .mini-col { display: grid; gap: 12px; }
-    .mini { min-height: 64px; }
-    .line { min-height: 18px; }
-
-    .mock-bottom {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .product-thumb {
-      min-height: 84px;
-      padding: 10px;
+        linear-gradient(180deg, rgba(22, 22, 22, 0.08), rgba(22, 22, 22, 0.34)),
+        url('Imagens/pinterest-pin-01-pia-bancada.png') center/cover no-repeat;
       display: flex;
       align-items: end;
-      font-size: 12px;
-      color: #6d6257;
-      font-weight: 700;
+      justify-content: start;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(255,255,255,0.9);
+      border-radius: 18px;
+      box-shadow: 0 14px 32px rgba(45, 31, 18, 0.12);
+      max-width: 280px;
+    }
+
+    .hero-badge strong {
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .hero-badge span {
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .section,
@@ -336,6 +304,7 @@
       background: #9a968f;
       pointer-events: none;
       cursor: default;
+      opacity: 0.95;
     }
 
     .btn.secondary {
@@ -375,6 +344,20 @@
       padding: 14px 16px;
       border-radius: 10px;
       color: #634f1f;
+    }
+
+    .prep-box {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--soft);
+      padding: 18px;
+    }
+
+    .prep-box ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #55504b;
     }
 
     .footer {
@@ -419,21 +402,9 @@
       </div>
 
       <div class="hero-visual">
-        <div class="mock-kitchen">
-          <div class="mock-top">
-            <div class="block">Organized sink zone</div>
-            <div class="mini-col">
-              <div class="mini"></div>
-              <div class="mini"></div>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="line" style="margin-top:10px; width:78%;"></div>
-          <div class="mock-bottom">
-            <div class="product-thumb">Drawer order</div>
-            <div class="product-thumb">Cabinet space</div>
-            <div class="product-thumb">Pantry clarity</div>
-          </div>
+        <div class="hero-badge">
+          <strong>Calmer sink. Cleaner counter. Better first impression.</strong>
+          <span>Start with one practical upgrade and build the rest of the kitchen one section at a time.</span>
         </div>
       </div>
     </div>
@@ -483,7 +454,7 @@
             <div class="item">
               <h3>Sponge and soap holder</h3>
               <p>Good for reducing wet clutter around the sink and making the counter feel more organized fast.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
           </div>
         </div>
@@ -498,12 +469,12 @@
             <div class="item">
               <h3>Adjustable drawer organizer</h3>
               <p>Helps separate utensils clearly and reduce the constant friction of messy kitchen drawers.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
             <div class="item">
               <h3>Modular utensil tray</h3>
               <p>Useful when you want a little more flexibility for smaller tools, gadgets, and cooking accessories.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
           </div>
         </div>
@@ -518,22 +489,22 @@
             <div class="item">
               <h3>Pantry basket organizer</h3>
               <p>Useful for grouping related items so the pantry looks cleaner and is easier to navigate.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
             <div class="item">
               <h3>Extra cabinet shelf</h3>
               <p>A simple way to create usable space inside cabinets without changing the whole setup.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
             <div class="item">
               <h3>Stackable pantry organizer</h3>
               <p>Good for getting more value from vertical storage when shelf space is limited.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
             <div class="item">
               <h3>Clear pantry container set</h3>
               <p>Strong visual payoff and a cleaner overall look for people who like visible order.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
           </div>
         </div>
@@ -548,7 +519,7 @@
             <div class="item">
               <h3>Vertical lid organizer</h3>
               <p>Helps keep lids and similar items upright, separated, and much easier to grab.</p>
-              <a class="btn disabled" href="#">Affiliate link placeholder</a>
+              <a class="btn disabled" href="#">Link coming soon</a>
             </div>
             <div class="item">
               <h3>Premium kitchen organization kit</h3>
@@ -559,7 +530,16 @@
         </div>
       </div>
 
-      <div class="note">Visual upgrade applied with the project's selected images. Next step: update the published page and replace link placeholders with real affiliate links.</div>
+      <div class="note">This page is now visually structured and ready for the monetization layer. Product links will be added last.</div>
+
+      <div class="prep-box">
+        <strong>What is already prepared</strong>
+        <ul>
+          <li>Visual sections organized by real kitchen problems</li>
+          <li>Selected images already applied to support trust and click intent</li>
+          <li>Product placeholders positioned for final affiliate link insertion</li>
+        </ul>
+      </div>
     </div>
 
     <div class="footer">
